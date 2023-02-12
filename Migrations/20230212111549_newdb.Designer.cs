@@ -12,8 +12,8 @@ using SummerProgramDemo.Data;
 namespace SummerProgramDemo.Migrations
 {
     [DbContext(typeof(UserProfileDbContext))]
-    [Migration("20220802074436_user-management")]
-    partial class usermanagement
+    [Migration("20230212111549_newdb")]
+    partial class newdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -483,8 +483,7 @@ namespace SummerProgramDemo.Migrations
 
                     b.Navigation("UserNotes");
 
-                    b.Navigation("UserSerialNo")
-                        .IsRequired();
+                    b.Navigation("UserSerialNo");
                 });
 #pragma warning restore 612, 618
         }
